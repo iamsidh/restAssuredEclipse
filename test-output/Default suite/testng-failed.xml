@@ -5,7 +5,7 @@
     <classes>
       <class name="restAssuredTest.DataDrivenExamples">
         <methods>
-          <include name="json_post"/>
+          <include name="json_delete_using_dataprovider" invocation-numbers="0"/>
         </methods>
       </class> <!-- restAssuredTest.DataDrivenExamples -->
     </classes>

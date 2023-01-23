@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sidh\AppData\Local\Temp\testng-eclipse--1828149080\testng-customsuite.xml</span>
+                    <span>C:\Users\Sidh\AppData\Local\Temp\testng-eclipse-2015454085\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="restAssuredTest.DataDrivenExamples" class="method navigator-link" hash-for-method="json_post(Natasha, Maxximof, 2)">json_post(Natasha, Maxximof, 2)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="restAssuredTest.DataDrivenExamples" class="method navigator-link" hash-for-method="json_post(Peter, Parker, 1)">json_post(Peter, Parker, 1)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="restAssuredTest.DataDrivenExamples" class="method navigator-link" hash-for-method="json_delete_using_dataprovider(9)">json_delete_using_dataprovider(9)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,18 +126,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="json_post(Natasha, Maxximof, 2)">
-                  </a> <!-- json_post(Natasha, Maxximof, 2) -->
-                  <span class="method-name">json_post</span>
-                  <span class="parameters">(Natasha,Maxximof,2)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="json_post(Peter, Parker, 1)">
-                  </a> <!-- json_post(Peter, Parker, 1) -->
-                  <span class="method-name">json_post</span>
-                  <span class="parameters">(Peter,Parker,1)</span>
+                  <a name="json_delete_using_dataprovider(9)">
+                  </a> <!-- json_delete_using_dataprovider(9) -->
+                  <span class="method-name">json_delete_using_dataprovider</span>
+                  <span class="parameters">(9)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sidh\AppData\Local\Temp\testng-eclipse--1828149080\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sidh\AppData\Local\Temp\testng-eclipse-2015454085\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -161,7 +148,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;restAssuredTest.DataDrivenExamples&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;json_post&quot;/&gt;
+          &lt;include name=&quot;json_delete_using_dataprovider&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- restAssuredTest.DataDrivenExamples --&gt;
     &lt;/classes&gt;
@@ -203,20 +190,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'json_post')
+data.setCell(0, 1, 'json_delete_using_dataprovider')
 data.setCell(0, 2, 'restAssuredTest.DataDrivenExamples')
-data.setCell(0, 3, 3481);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'json_post')
-data.setCell(1, 2, 'restAssuredTest.DataDrivenExamples')
-data.setCell(1, 3, 65);
+data.setCell(0, 3, 5009);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -231,13 +214,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">restAssuredTest.DataDrivenExamples</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">json_post_using_dataprovider</span>
+                <br/>
+                <span class="ignored-method-name">json_post</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -251,12 +236,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">restAssuredTest.DataDrivenExamples</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">json_post(Natasha, Maxximof, 2)</span>
+                <span class="method-name">json_delete_using_dataprovider(9)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">json_post(Peter, Parker, 1)</span>
-                <span class="method-start">3491 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

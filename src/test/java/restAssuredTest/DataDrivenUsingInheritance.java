@@ -1,43 +1,17 @@
 package restAssuredTest;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
 
 import org.json.JSONObject;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class DataDrivenExamples {
-
-	@DataProvider(name = "dataforpost")
-	public Object[][] DataForPost() {
-
-		Object[][] data = new Object[2][3];
-
-		data[0][0] = "Thor";
-		data[0][1] = "Odinson";
-		data[0][2] = 1;
-
-		data[1][0] = "Steve";
-		data[1][1] = "Rogers";
-		data[1][2] = 3;
-
-		return data;
-	}
-
-	@DataProvider(name = "dataforpost2")
-	public Object[][] dataForPost2() {
-
-		return new Object[][] 
-				{
-
-					{ "Natasha", "Maxximof", 2 }, 
-					{ "Peter", "Parker", 1 } 
-				};
-	}
-
+public class DataDrivenUsingInheritance extends DataForTests {
+	
 	@Test(dataProvider = "dataforpost")
 	public void json_post_using_dataprovider(String firstname, String lastname, int subjectid) {
 
@@ -54,7 +28,6 @@ public class DataDrivenExamples {
 				.then().statusCode(201).log().body();
 
 	}
-	
 	@Test(dataProvider = "dataforpost2",priority = 2)
 	public void json_post(String firstname,String lastname,int subjectid) {
 		
@@ -70,17 +43,20 @@ public class DataDrivenExamples {
 		.then().statusCode(201).log().body();
 		
 	}
-	@DataProvider(name = "datafordelete")
-	public Object[] datafordelete() {
-		
-		return new Object[] {
-				9	
-		};
-		
-	}
-	@Test(dataProvider = "datafordelete",priority = 3)
+	
+	//@Test(dataProvider = "datafordelete",priority = 3)
 	public void json_delete_using_dataprovider(int UserID) {
 		baseURI="http://localhost:3000/";
 		when().delete("/users/"+UserID).then().statusCode(200).log().body();
 	}
+	
+	@Parameters({"userID"})
+	@Test
+	public void delete_using_testng_parameters(int UserID) {
+		System.out.println("Value for userid from TestNG.xml is: "+UserID);
+		baseURI="http://localhost:3000/";
+		when().delete("/users/"+UserID).then().statusCode(200).log().body();
+		
+	}
+
 }
