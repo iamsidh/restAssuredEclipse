@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="restAssuredTest.DataDrivenExamples">
+      <class name="restAssuredTest.getBookDetails">
         <methods>
-          <include name="json_delete_using_dataprovider" invocation-numbers="0"/>
+          <include name="getBookDetailsfromweb"/>
         </methods>
-      </class> <!-- restAssuredTest.DataDrivenExamples -->
+      </class> <!-- restAssuredTest.getBookDetails -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
